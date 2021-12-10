@@ -13,7 +13,6 @@ export let shorten_word = function (word, n = 15) {
     return (word.substr(0, n) + ellipses);
 
 };
-
 export let ajax = (url, callback = () => { }, method = "GET", data = {}) => {
 
     axios({

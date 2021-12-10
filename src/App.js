@@ -1,7 +1,11 @@
-import React from 'react'
-import Home from './pages/home/index'
-import { Routes, Route } from "react-router-dom";
+import React from 'react';
+
+// import {withRouter} from "react-router";
+
+import { Routes, Route} from "react-router-dom";
 import { NavHeader } from './pages/shared-components/nav-header';
+import Home from './pages/home/index';
+import { Products } from './pages/products/products';
 
 
 class App extends React.Component {
@@ -9,9 +13,12 @@ class App extends React.Component {
     return <div className="flex flex-col font-lato">
       <NavHeader />
       <main>
+        {/* <BrowserRouter> */}
         <Routes>
-          <Route path="/" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="products/:id" element={Products} />
         </Routes>
+        {/* </BrowserRouter> */}
       </main>
     </div>
   }
