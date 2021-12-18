@@ -42,7 +42,11 @@ export class FeaturedProduct extends Component {
 
             this.setState({ productArray: format_data });
 
-        }
+        };
+
+    }
+
+    componentDidMount() {
 
         ajax(`https://fakestoreapi.com/products/?limit=10`, this.updateProduct);
 
@@ -99,7 +103,7 @@ class EachProduct extends Component {
                 </div>
 
                 <div className="flex flex-col items-center w-full">
-                    
+
                     <div className="self-center w-44 h-44 group-hover:w-32 group-hover:h-32">
                         <img src={this.props.image} alt="chair product" className="object-cover w-full h-full" />
                     </div>

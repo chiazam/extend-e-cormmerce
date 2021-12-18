@@ -45,6 +45,10 @@ export class Products extends Component {
 
         this.url_params = this.props.params.id;
 
+    }
+
+    componentDidMount() {
+
         ajax(`https://fakestoreapi.com/products/${this.url_params}`, this.updateProduct);
 
     }
